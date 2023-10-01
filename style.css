@@ -1,0 +1,290 @@
+/* CSS Reset */
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* body{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZrAf1Yfdj--EQPorW7wZKtjRzltXR98yNSQ&usqp=CAU');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+} */
+
+/* CSS Variable */
+:root{
+    --navbar-height: 60px;
+}
+
+/* Navigation bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+    /* justify-content: center; */
+  
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+    top:0px;
+    left: 0px;
+}
+
+/* Navigation bar: logo and image */
+#logo{
+    margin: 2px 6px;
+}
+
+/* Navigation bar: list styling */
+#logo img{
+    height: 80px;
+    margin: 30px 30px;
+}
+
+/* #navbar{
+    position: relative;
+} */
+
+#navbar ul{
+   display: flex;
+   font-family: 'Roboto Slab', serif;
+}
+
+#navbar ul li{
+
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 42px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home section */
+#home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 200px;
+    height: 605px;
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url('bg1.jpg') no-repeat center center/cover;
+    height: 740px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+#services{
+    margin: 34px;
+    display: flex;
+}
+
+#services .box {
+    border: 3px solid brown;
+    padding: 34px;
+    margin: 5px 50px;
+    text-align: center;
+    border-radius: 10px;
+    background-color : antiquewhite;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+} 
+
+#services .box img{
+       height: 200px;
+       margin: auto;
+       display: block;
+}
+
+.center {
+    text-align: center;
+}
+
+/* Client section */
+#client-section{
+   height: 300px;
+   /* position: relative; */
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('bg.jpg');
+    height: 40%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.client-item{
+    padding: 30px;
+}
+
+#clients img{
+    height: 140px;
+}
+
+/* contact section */
+#conatct{
+    position: relative;
+}
+
+#contact::before{
+    content: "";
+    position: absolute;
+    background: url('contact.jpg') no-repeat center center/cover;
+    height: 75%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+input,textarea{
+    width: 100%;
+    padding:0.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#contact-box form{
+    width: 25%;
+}
+
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility classes */
+.h-primary{
+    font-family: 'Joan', serif;
+    font-size: 3rem;
+    padding: 10px;
+   justify-content: center;
+}
+
+.h-secondary{
+    font-family: 'Tai Heritage Pro', serif;
+    font-size: 2.6rem;
+    padding: 15px;
+}
+
+.btn {
+    color: white;
+    background-color: brown;
+    font-size: 1.2rem;
+    padding: 6px 12px;
+    margin: 11px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+#submitbtn{
+    background-color: red;
+    color:white;
+    outline:none;
+    border:none;
+    border-radius:10px;
+    padding-left:25px;
+    padding-right:15px;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+@media (max-width:922px){
+    .boxes{
+        grid-template-columns: repeat(2,auto);
+    }
+    #sub-home h1{
+        font-size: 3.2rem;
+    }
+}
+@media(max-width:610px){
+    #semail,#sbtn{
+        font-size: 1.2rem;
+    }
+}
+@media(max-width:524px){
+    #semail,#sbtn{
+        font-size: 1rem;
+    }
+}
+@media(max-width:486px){
+    .boxes{
+        grid-template-columns: repeat(1,auto);
+    }
+    .box4{
+        grid-gap:5px;
+        margin-bottom:25px;
+    }
+}
+@media(max-width:395px){
+    header button{
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+
